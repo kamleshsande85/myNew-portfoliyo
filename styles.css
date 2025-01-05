@@ -1,0 +1,349 @@
+/* Define CSS variables for easy customization */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #004494;
+    --background-color: #e0f7fa; /* Changed to a light cyan background color */
+    --text-color-light: white;
+    --text-color-dark: black;
+    --border-color: #ccc;
+    --font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    padding: 20px;
+    color: var(--text-color-dark);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family);
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--text-color-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Forms */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+}
+
+/* Logo Styling */
+.logo {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content Styling */
+.content {
+    padding: 20px;
+    background-color: var(--text-color-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.introduction, .education, .technical_Skills, .certifications, .projects, .experiences, .other {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--text-color-light);
+    color: var (--text-color-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+/* Table Styles */
+.content .education table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.content .education th,
+.content .education td {
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    text-align: left;
+}
+
+.content .education th {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.content .education tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.content .education tr:hover {
+    background-color: #ddd;
+}
+
+/* Technical Skills Section */
+.technical_Skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: var(--text-color-light);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.technical_Skills h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.technical_Skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.technical_Skills ul li {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.technical_Skills ul li:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Certifications Section */
+.certification-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cert-box {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cert-box img {
+    width: 100%;
+}
+
+/* Projects Section */
+.projects {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--text-color-light);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-box {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--text-color-light);
+    border-radius: 5px;
+}
+
+.project-box video {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.project-box h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.project-box p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Experiences Section */
+.experiences {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--text-color-light);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.experience {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.experience:last-child {
+    border-bottom: none;
+}
+
+.experience h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.experience p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Social Media Links */
+.other ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.other li {
+    margin-bottom: 10px;
+}
+
+.other a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.other a:hover {
+    background-color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.other a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Example logos (you need to download and place these images in your project) */
+/* GitHub logo: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png */
+/* LinkedIn logo: https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png */
+/* TryHackMe logo: https://tryhackme-images.s3.amazonaws.com/THMlogo.png */
+/* Facebook logo: https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg */
+/* Twitter logo: https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg */
+/* Instagram logo: https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png */
